@@ -1,0 +1,137 @@
+/* General body styling */
+body {
+  font-family: 'Cinzel', serif;
+  background-image: url('images/joulu_kuva.jpg'); /* Replace with your Christmas background image */
+  background-size: cover;
+  background-attachment: fixed;
+  color: #8a8989;
+  margin: 10;
+  padding: 10;
+}
+
+/* Main heading with more emphasis */
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: rgb(19, 7, 175) 77, 211;
+  text-shadow: 2px 2px 4px #00158b;
+  margin: 20px 0;
+}
+
+/* Calendar grid */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for the calendar */
+  gap: 10px;
+  padding: 0px;
+  justify-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the calendar */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 600px;
+}
+
+/* Individual door styling with alternating colors */
+.door:nth-child(odd) {
+  background: #2700b3; /* Red for odd doors */
+  color: #fff;
+}
+
+.door:nth-child(even) {
+  background: #000264; /* Green for even doors */
+  color: #fff;
+}
+
+.door {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.door:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Rest of the styles remain the same */
+
+/* Load the Cinzel font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* Include additional styles and modal styling */
+
+.calendar-day {
+    
+    cursor: pointer;
+  }
+  
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-container {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10px auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .caption {
+    font-size: 2em;
+  }
+  
+  
+  
+  .door.open {
+    animation: swingOpen 0.5s forwards;
+  }
+  
+  @keyframes swingOpen {
+    to { transform: rotateY(180deg); }
+  }
+  
+  
