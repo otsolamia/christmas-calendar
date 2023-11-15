@@ -4,7 +4,7 @@ body {
   background-image: url('images/joulu_kuva.jpg'); /* Replace with your Christmas background image */
   background-size: cover;
   background-attachment: fixed;
-  color: #8a8989;
+  color: #000000;
   margin: 10;
   padding: 10;
 }
