@@ -1,6 +1,10 @@
+@font-face {
+  font-family: 'MDprimerBold';
+  src: url('MDprimer-Bold.otf') format('opentype');
+}
 /* General body styling */
 body {
-  font-family: 'Cinzel', serif;
+  font-family: 'MDprimerBold', sans-serif;
   background-image: url('images/joulu_kuva.webp');
   /* Replace with your Christmas background image */
   background-size: cover;
