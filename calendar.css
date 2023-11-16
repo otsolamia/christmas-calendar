@@ -1,9 +1,11 @@
 /* General body styling */
 body {
   font-family: 'Cinzel', serif;
-  background-image: url('images/joulu_kuva.jpg'); /* Replace with your Christmas background image */
+  background-image: url('images/joulu_kuva.webp');
+  /* Replace with your Christmas background image */
   background-size: cover;
   background-attachment: fixed;
+  background-position: 50% 50%;
   color: #000000;
   margin: 10;
   padding: 10;
@@ -13,20 +15,23 @@ body {
 h1 {
   font-size: 5rem;
   text-align: center;
-  color: rgb(77, 65, 253) 77, 211;
-  text-shadow: 2px 2px 4px rgba(55, 58, 248, 0.856);
+  text-shadow:
+    0 0 4px rgb(0, 0, 0),
+    4px 4px 8px rgba(0, 0, 0, 0.856);
   margin: 20px 0;
-  color: #341ef8; 
+  color: #ffffff;
 }
 
 /* Calendar grid */
 .calendar {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns for the calendar */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 columns for the calendar */
   gap: 10px;
   padding: 0px;
   justify-items: center;
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the calendar */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Slightly transparent background for the calendar */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -35,12 +40,14 @@ h1 {
 
 /* Individual door styling with alternating colors */
 .door:nth-child(odd) {
-  background: #2700b3; /* Red for odd doors */
+  background: #2700b3;
+  /* Red for odd doors */
   color: #fff;
 }
 
 .door:nth-child(even) {
-  background: #000264; /* Green for even doors */
+  background: #000264;
+  /* Green for even doors */
   color: #fff;
 }
 
@@ -75,70 +82,82 @@ h1 {
 /* Include additional styles and modal styling */
 
 .calendar-day {
-    
-    cursor: pointer;
-  }
-  
- /* The Modal (background) */
+
+  cursor: pointer;
+}
+
+/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  .modal-container {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    text-align: center;
-  }
-  
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
 
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 10px auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.modal-container {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  text-align: center;
+}
 
-  .caption {
-    font-size: 2em;
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10px auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.caption {
+  font-size: 2em;
+}
+
+
+
+.door.open {
+  animation: swingOpen 0.5s forwards;
+}
+
+@keyframes swingOpen {
+  to {
+    transform: rotateY(180deg);
   }
-  
-  
-  
-  .door.open {
-    animation: swingOpen 0.5s forwards;
-  }
-  
-  @keyframes swingOpen {
-    to { transform: rotateY(180deg); }
-  }
-  
-  
+}
