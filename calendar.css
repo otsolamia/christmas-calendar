@@ -11,8 +11,8 @@ body {
   background-attachment: fixed;
   background-position: 50% 50%;
   color: #000000;
-  margin: 10;
-  padding: 10;
+  margin: 9;
+  padding: 9;
 }
 h1 {
   position: relative;
@@ -42,7 +42,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* 4 columns for the calendar */
-  gap: 10px;
+  gap: 20px;
   padding: 0px;
   justify-items: center;
   background-color: rgba(255, 255, 255, 0.8);
