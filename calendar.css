@@ -13,10 +13,10 @@ body {
 h1 {
   font-size: 5rem;
   text-align: center;
-  color: rgb(19, 7, 175) 77, 211;
-  text-shadow: 2px 2px 4px #00158b;
+  color: rgb(77, 65, 253) 77, 211;
+  text-shadow: 2px 2px 4px rgba(55, 58, 248, 0.856);
   margin: 20px 0;
-  color: white; 
+  color: #341ef8; 
 }
 
 /* Calendar grid */
@@ -61,6 +61,10 @@ h1 {
 .door:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.unlocked {
+  border: 4px solid lightblue;
 }
 
 /* Rest of the styles remain the same */

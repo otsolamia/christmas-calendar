@@ -266,8 +266,10 @@
 
             <div class="modal-container">
                 <span class="close">&times;</span>
-                <img id="modalImage24" src="images/corgiday24.png" class="modal-content" alt="Day 24 Image">
-                <div id="captionDay24" class="caption">Corgi's Whispering Pine Walks</div>
+                <video id="modalvideo24" class="modal-content" controls>
+                    <source src="videos/corgivid24.mp4" type="video/mp4">
+                </video>
+                <div id="captionDay24" class="caption">Merry christmas to everyone!</div>
 
             </div>
         </div>
@@ -347,8 +349,13 @@
             const doorDate = new Date(door.getAttribute('data-date'));
             doorDate.setHours(0, 0, 0, 0); // Normalize door date to midnight for comparison
 
+            if (currentDate.getTime() >= doorDate.getTime()) {
+                door.classList.add('unlocked');
+            }
+
+
             door.addEventListener('click', () => {
-                if (true || currentDate.getTime() >= doorDate.getTime()) {
+                if (currentDate.getTime() >= doorDate.getTime()) {
                     // Date is valid, open modal logic here
                     const day = door.getAttribute('data-day');
                     const modal = document.getElementById(`modal${day}`);
