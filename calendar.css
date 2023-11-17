@@ -7,7 +7,7 @@
 /* General body styling */
 body {
   font-family: 'MDprimerBold', sans-serif;
-  background-image: url('images/joulu_kuva.webp');
+  background-image: url('images/joulu_kuva.png');
   /* Replace with your Christmas background image */
   background-size: cover;
   max-height: 100vh;
@@ -59,13 +59,13 @@ h1 {
 
 /* Individual door styling with alternating colors */
 .door:nth-child(odd) {
-  background: #2700b3;
+  background: #b30000;
   /* Red for odd doors */
   color: #fff;
 }
 
 .door:nth-child(even) {
-  background: #000264;
+  background: #0c6400;
   /* Green for even doors */
   color: #fff;
 }
