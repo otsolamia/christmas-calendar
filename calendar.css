@@ -180,3 +180,17 @@ h1 {
     transform: rotateY(180deg);
   }
 }
+
+/* CSS code to hide an image on narrow screens */
+
+/* This is the default style, where the image is displayed */
+img.your-image-class {
+  display: block;
+}
+
+/* This is a media query that applies styles for screens with a width of less than 768 pixels */
+@media (max-width: 768px) {
+  img.your-image-class {
+    display: none; /* This will hide the image on screens narrower than 768 pixels */
+  }
+}
