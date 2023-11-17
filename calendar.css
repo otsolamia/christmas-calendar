@@ -3,13 +3,6 @@
   src: url('MDprimer-Bold.otf') format('opentype');
 
 }
-
-@font-face {
-  font-family: 'MDprimerBold';
-  src: url('fonts/MDprimer-Bold.woff') format('woff'),
-       url('fonts/MDprimer-Bold.otf') format('opentype');
-}
-
 /* General body styling */
 body {
   font-family: 'MDprimerBold', sans-serif;
