@@ -53,6 +53,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: auto;
   max-width: 600px;
+  max-height: 100vh;
 }
 
 /* Individual door styling with alternating colors */
