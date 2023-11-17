@@ -6,17 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HiQ Christmas Calendar</title>
     <link rel="stylesheet" href="calendar.css">
-<style>
-     /* CSS code to hide an image on narrow screens */
-     img.calendar-image {
-            display: block;
-        }
-        @media (max-width: 768px) {
-            img.calendar-image {
-                display: none; /* This will hide the image on screens narrower than 768 pixels */
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -286,66 +275,6 @@
 
             </div>
         </div>
-        <!-- <script>
-
-            // document.getElementById('door1').onclick = function() {
-            //     var modal = document.getElementById('modal1');
-            //     var modalImg = document.getElementById('modalImage1');
-            //     var captionText = document.getElementById('captionDay1');
-
-            //     modal.style.display = "block";
-            //     modalImg.src = 'images/corgiday1.jpg';
-            //     captionText.innerHTML = "Happy December! Embrace the holiday spirit.";
-            // }
-
-
-            document.querySelector('.modal .close').onclick = function () {
-                var modal = this.parentElement?.parentElement || document.getElementById('modal1');
-                modal.style.display = "none";
-            }
-
-            var currentModal = null;
-
-            window.onclick = function (event) {
-                var modal = currentModal || document.getElementById('modal1');
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-
-            function activateDoorOpen(day) {
-                door.onclick = function () {
-                    showModal(day);
-                };
-            }
-
-            for (var day = 1; day <= 24; day++) {
-                // When the user clicks on a Door, open the corresponding modal
-                var door = document.getElementById('door' + day);
-                if (door != undefined) {
-                    activateDoorOpen(day);
-                }
-            }
-
-
-            // // Get the <span> element that closes the modal for Day 2
-            // var spanClose2 = document.getElementById('close2');
-
-            // // When the user clicks on <span> (x), close the modal for Day 2
-            // spanClose2.onclick = function() {
-            //     var modal = document.getElementById('modal2');
-            //     modal.style.display = "none";
-            // };
-
-            // Function to show the modal
-            function showModal(day) {
-                var modal = document.getElementById('modal' + day);
-                currentModal = modal;
-                modal.style.display = "block";
-            }
-
-
-        </script> -->
 </body>
 
 </html>
@@ -373,7 +302,7 @@
                     const day = door.getAttribute('data-day');
                     const modal = document.getElementById(`modal${day}`);
                     if (modal) {
-                        modal.style.display = 'block';
+                        modal.style.display = 'flex';
                         currentModal = modal;
                     }
                 } else {
